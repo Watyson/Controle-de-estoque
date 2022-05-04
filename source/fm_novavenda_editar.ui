@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fm_novaVenda_editar</class>
+ <widget class="QDialog" name="fm_novaVenda_editar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>246</width>
+    <height>140</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Editar</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background:#ececec
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="btn_ok">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton:enabled{background:#7dbe50;}
+QPushButton:disabled{background:#aaff7f;}
+QPushButton:pressed{background:#aaff00;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Confirmar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="btn_cancel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton:enabled{background:#faa91d;}
+QPushButton:disabled{background:#fabe50;}
+QPushButton:pressed{background:#ffd500;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Cancelar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lb_qtd">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Quantidade:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="line_qtd">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}
+</string>
+       </property>
+       <property name="maxLength">
+        <number>9</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="lb_estoque">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Em estoque disponivel: 0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>99</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>line_qtd</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fm_dados</class>
+ <widget class="QDialog" name="fm_dados">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>612</width>
+    <height>393</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dados</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="lb_dataIni">
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Data inicial</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="lb_dataFim">
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Data final</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDateEdit" name="de_inicio">
+     <property name="displayFormat">
+      <string>dd-MM-yyyy</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QDateEdit" name="de_fim">
+     <property name="displayFormat">
+      <string>dd-MM-yyyy</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="btnCarregar">
+     <property name="text">
+      <string>Carregar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QFrame" name="frame_4">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="6" column="0" colspan="2">
+       <widget class="Line" name="line_2">
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="lbRLu">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Lucro</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lbRETotal">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Total: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lbRE">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Em estoque</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="lbRLuTotal">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>R$: 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="lbR">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Roupa</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="Line" name="line">
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0" colspan="2">
+       <widget class="QLabel" name="lbRLTotal">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Total: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0" colspan="2">
+       <widget class="QLabel" name="lbRLVista">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>À vista: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" colspan="2">
+       <widget class="QLabel" name="lbRLTransferencia">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Transferência: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0" colspan="2">
+       <widget class="QLabel" name="lbRLComodato">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Comodato: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QLabel" name="lbRLCartao">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Cartão: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <widget class="QLabel" name="lbRLDinheiro">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Dinheiro: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QLabel" name="lbRL">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Vendas</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="3" column="0">
+       <widget class="QLabel" name="lbETotal">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Total: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lbEE">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Em estoque</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="lbEL">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Lucro</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="lbELTotal">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>R$: 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="lbE">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Esmalte</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="Line" name="line_3">
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="Line" name="line_4">
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QLabel" name="lbEV">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Vendas</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QLabel" name="lbEVDinheiro">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Dinheiro: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QLabel" name="lbEVCartao">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Cartão: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <widget class="QLabel" name="lbEVComodato">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Comodato: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QLabel" name="lbEVTotal">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background:#e0e0e0;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Total: R$ 0.00</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <spacer name="vs">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

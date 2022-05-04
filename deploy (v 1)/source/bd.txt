@@ -1,0 +1,95 @@
+.cd C:/Users/Watyson/Desktop/proj/Final/build-ControleDeEstoqueEVendas-Desktop_Qt_5_12_5_MinGW_64_bit-Debug/debug/dados
+.open dados.db
+
+CREATE TABLE tb_pessoas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(150) NOT NULL,
+    tel VARCHAR(11) NOT NULL
+);
+
+CREATE TABLE tb_vendedores(
+    user VARCHAR(15) PRIMARY KEY,
+    senha VARCHAR(15),
+    id_pessoa INTEGER UNIQUE REFERENCES tb_pessoas (id) ON UPDATE CASCADE,
+    acesso VARCHAR(1),
+    
+    CHECK (acesso == 'A' OR acesso == 'B')
+);
+
+CREATE TABLE tb_clientes(
+    id_pessoa INTEGER PRIMARY KEY REFERENCES tb_pessoas (id) ON UPDATE CASCADE,
+    cep VARCHAR(8),
+    cnpj VARCHAR(14) NOT NULL
+    endereco VARCHAR(150),
+    ref VARCHAR(150),
+);
+
+CREATE TABLE tb_esmalte(
+    id VARCHAR(20) PRIMARY KEY,
+    cor VARCHAR(30) UNIQUE,
+    qtd INTEGER,
+    valor_um REAL,
+    valor_um_compra REAL,
+    valor_desconto REAL
+);
+
+CREATE TABLE variavel_desconto(
+	qtd INTEGER PRIMARY KEY
+);
+
+CREATE TABLE tb_vendas(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	data DATE,
+	hora TIME,
+	id_vendedor INTEGER,
+	id_cliente INTEGER,
+	valor_total REAL,
+	tipo_pagamento VARCHAR(1),
+	tipo_venda VARCHAR(1),
+
+	CHECK (tipo_pagamento == '0'
+	   OR tipo_pagamento == '1'
+	   OR tipo_pagamento == '2'
+	   OR tipo_pagamento == '3'
+	   OR tipo_pagamento == '4'),
+
+	CHECK (tipo_venda == 'e'
+	   OR  tipo_venda == 'r')
+);
+
+CREATE TABLE tb_produtos_vendidos(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	id_venda INTEGER,
+	id_produto INTEGER,
+	qtd INTEGER,
+	valor_um REAL
+);
+
+CREATE TABLE tb_comodato(
+	id INTEGER PRIMARY KEY,
+	id_cliente INTEGER REFERENCES tb_pessoas (id),
+	id_venda INTEGER REFERENCES tb_vendas (id),
+	status BOOLEAN;
+);
+
+CREATE TABLE tb_brinde(
+	nome VARCHAR(50) PRIMARY KEY,
+	qtd INTEGER,
+	vlr_custo REAL
+);
+
+CREATE TABLE tb_roupa(
+	id VARCHAR(20) PRIMARY KEY,
+	roupa VARCHAR(50),
+	qtd INTEGER,
+	vlr_venda REAL,
+	vlr_compra REAL
+);
+
+CREATE TABLE variavel_desc_roupa (
+    qtd INTEGER PRIMARY KEY
+);
+
+CREATE TABLE variavel_user (
+    user VARCHAR (15) PRIMARY KEY
+);

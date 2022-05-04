@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fm_gestao_esmalte</class>
+ <widget class="QDialog" name="fm_gestao_esmalte">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>791</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestão de estoque de esmaltes</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background:#ececec
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabW">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tabNovo">
+      <attribute name="title">
+       <string>Novo</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0">
+        <layout class="QVBoxLayout" name="vlNovoQtd">
+         <item>
+          <widget class="QLabel" name="lbNovoQtd">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Quantidade</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineNovoQtd">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <layout class="QVBoxLayout" name="vlNovoValorUmV">
+         <item>
+          <widget class="QLabel" name="lbNovoValorUmV">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Valor Unitario (Venda)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineNovoValorUmV">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <layout class="QVBoxLayout" name="vlNovoValorUmC">
+         <item>
+          <widget class="QLabel" name="lbNovoValorUmC">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Valor Unitário (Compra)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineNovoValorUmC">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="3">
+        <layout class="QVBoxLayout" name="vlNovoValorDesc">
+         <item>
+          <widget class="QLabel" name="lbNovoValorDesc">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Valor Unitario (Venda com desconto)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineNovoValorDesc">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="3">
+        <layout class="QVBoxLayout" name="vlNovoCor">
+         <item>
+          <widget class="QLabel" name="lbNovoCor">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Cor</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineNovoCor">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+           <property name="maxLength">
+            <number>30</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <layout class="QVBoxLayout" name="vlNovoCodBarras">
+         <item>
+          <widget class="QLabel" name="lbNovoCodBarras">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Código de barras</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineNovoCodBarras">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="0" colspan="4">
+        <spacer name="vsNovo">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>418</width>
+           <height>173</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="3">
+        <widget class="QPushButton" name="btnNovoGravar">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:enabled{background:#7dbe50;}
+QPushButton:disabled{background:#aaff7f;}
+QPushButton:pressed{background:#aaff00;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Gravar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabGestao">
+      <attribute name="title">
+       <string>Gestão</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0" rowspan="2">
+        <widget class="QFrame" name="frameGestao">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Dados</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbGestaoCodBarras">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Cód. de Barras</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineGestaoCodBarras">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+            </property>
+            <property name="maxLength">
+             <number>150</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbGestaoCor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Cor</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineGestaoCor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+            </property>
+            <property name="maxLength">
+             <number>11</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbGestaoQtd">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Quantidade em estoque</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineGestaoQtd">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+            </property>
+            <property name="maxLength">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbGestaoValorUmV">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Valor Unitário (Venda)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineGestaoValorUmV">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+            </property>
+            <property name="maxLength">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbGestaoValorUmC">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Valor Unitário (Compra)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineGestaoValorUmC">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+            </property>
+            <property name="maxLength">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbGestaoValorDesc">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Valor com desconto</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineGestaoValorDesc">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+            </property>
+            <property name="maxLength">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="vsGestao">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnGestaoEditar">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:enabled{background:#7dbe50;}
+QPushButton:disabled{background:#aaff7f;}
+QPushButton:pressed{background:#aaff00;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Salvar edições</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnGestaoExcluir">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:enabled{background:#faa91d;}
+QPushButton:disabled{background:#fabe50;}
+QPushButton:pressed{background:#ffd500;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Excluir</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QGridLayout" name="glGestaoFiltro">
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="lineGestaoFiltro">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+           <property name="maxLength">
+            <number>150</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="btnGestaoFiltro">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:enabled{background:#7dbe50;}
+QPushButton:disabled{background:#aaff7f;}
+QPushButton:pressed{background:#aaff00;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Limpar filtro</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="lbGestaoFiltro">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:14pt;
+border:none;
+border-radius:10px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Filtro</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <widget class="QTableWidget" name="twGestao">
+         <property name="cursor" stdset="0">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTableWidget{
+color:#303030;
+font-size:9pt;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>50</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>250</number>
+         </attribute>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Cod. barras</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Cor</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabDesconto">
+      <attribute name="title">
+       <string>Desconto</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="glDesconto">
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="lineDesconto">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit:enabled{background:#ffffff;}
+QLineEdit:disabled{background:#e7e7e7;}
+
+QLineEdit{
+color:#303030;
+font-size:9pt;
+border-radius:7px;
+border:1px solid black;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="btnDesconto">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:enabled{background:#7dbe50;}
+QPushButton:disabled{background:#aaff7f;}
+QPushButton:pressed{background:#aaff00;}
+QPushButton{
+color:#ffffff;
+font-size:9pt;
+border:none;
+border-radius:10px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Confirmar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="lbDesconto">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Qtd. min para realizar o desconto</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QLabel" name="lbDescontoQtd">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+background:#e8e8e8;
+color:#808080;
+font-size:10pt;
+border:none;
+border-radius:6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Quantidade atual para realizar desconto: 0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="1" rowspan="2">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tabW</tabstop>
+  <tabstop>lineNovoCodBarras</tabstop>
+  <tabstop>lineNovoCor</tabstop>
+  <tabstop>lineNovoQtd</tabstop>
+  <tabstop>lineNovoValorUmV</tabstop>
+  <tabstop>lineNovoValorUmC</tabstop>
+  <tabstop>lineNovoValorDesc</tabstop>
+  <tabstop>btnNovoGravar</tabstop>
+  <tabstop>lineGestaoFiltro</tabstop>
+  <tabstop>btnGestaoFiltro</tabstop>
+  <tabstop>twGestao</tabstop>
+  <tabstop>btnGestaoEditar</tabstop>
+  <tabstop>btnGestaoExcluir</tabstop>
+  <tabstop>lineDesconto</tabstop>
+  <tabstop>btnDesconto</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
