@@ -1,2 +1,5 @@
 # Controle de estoque
- Uma tentativa de criar um programa em C++ para criar e gerenciar vendas
+ An attempt to create a C++ program to create and manage sales.
+ 
+ IDE: QT Creator
+ State: Incomplete
